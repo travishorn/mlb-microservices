@@ -14,7 +14,7 @@ Preview:
 
 ## Schemas
 
-```json
+```typescript
 Player {
   id: integer,
   teamId: integer,
