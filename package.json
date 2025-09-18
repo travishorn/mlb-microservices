@@ -1,0 +1,45 @@
+{
+  "name": "mlb-microservices",
+  "version": "0.1.0",
+  "description": "A small microservice system demonstrating an API gateway that composes separate domain services.",
+  "main": "gateway.js",
+  "scripts": {
+    "start:player": "node services/player.js",
+    "start:team": "node services/team.js",
+    "start:gateway": "node gateway.js",
+    "start": "concurrently \"npm run start:player\" \"npm run start:team\" \"npm run start:gateway\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "microservices",
+    "api",
+    "gateway",
+    "fastify",
+    "openapi",
+    "diagrams-as-code",
+    "mlb",
+    "baseball"
+  ],
+  "author": "Travis Horn <travis@travishorn.com> (https://travishorn.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travishorn/mlb-microservices.git"
+  },
+  "bugs": {
+    "url": "https://github.com/travishorn/mlb-microservices/issues"
+  },
+  "homepage": "https://github.com/travishorn/mlb-microservices#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fastify/swagger": "^9.5.1",
+    "@fastify/swagger-ui": "^5.2.3",
+    "fastify": "^5.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
